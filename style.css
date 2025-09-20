@@ -1,0 +1,28 @@
+body {
+    font-size: 20px;
+}
+.counter {
+  display: inline-block;
+  border: 2px solid #333;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 150px;   
+  text-align: center;
+  background: #f9f9f9;
+}
+.counter h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.counter label {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+.counter button {
+  margin: 3px;
+  padding: 5px 10px;
+  font-size: 14px;
+}

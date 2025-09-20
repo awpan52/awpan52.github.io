@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tally</title>
+  <style>
+    .page {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    .counter, .journal-entry {
+      border: 1px solid #ccc;
+      padding: 8px;
+      margin-bottom: 6px;
+      display: inline-block;
+    }
+    .journal-entry p {
+      margin: 4px 0;
+    }
+    button {
+      margin: 2px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tally App</h1>
+
+  <!-- Navigation -->
+  <button onclick="showPage('materials')">Materials</button>
+  <button onclick="showPage('products')">Products</button>
+  <button onclick="showPage('fulfillment')">Fulfillment</button>
+  <hr>
+
+  <!-- Materials Section -->
+  <div id="materials" class="page active">
+    <h2>Materials</h2>
+    <button id="addCounterBtn_materials">➕ Add Counter</button>
+    <div id="countersContainer_materials"></div>
+  </div>
+
+  <!-- Products Section -->
+  <div id="products" class="page">
+    <h2>Products</h2>
+    <button id="addCounterBtn_products">➕ Add Counter</button>
+    <div id="countersContainer_products"></div>
+  </div>
+
+  <!-- Fulfillment Journal Section -->
+  <div id="fulfillment" class="page">
+    <h2>Fulfillment</h2>
+    <textarea id="journalInput" rows="4" cols="50" placeholder="Write your log here..."></textarea><br>
+    <button id="saveJournalBtn">💾 Save Entry</button>
+    <h3>Your Entries</h3>
+    <div id="journalEntries"></div>
+  </div>
+
+  <script src="index.js" defer></script>
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
